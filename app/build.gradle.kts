@@ -55,6 +55,9 @@ dependencies {
     // Koin
     implementation("io.insert-koin:koin-android:3.1.2")
 
+    // Room
+    implementation("androidx.room:room-runtime:2.6.1")
+
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")

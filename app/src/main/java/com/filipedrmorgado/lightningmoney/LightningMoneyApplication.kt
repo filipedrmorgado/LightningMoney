@@ -1,6 +1,7 @@
 package com.filipedrmorgado.lightningmoney
 
 import android.app.Application
+import com.filipedrmorgado.di.databaseModule
 import com.filipedrmorgado.di.repositoriesModule
 import com.filipedrmorgado.lightningmoney.di.useCasesModule
 import com.filipedrmorgado.lightningmoney.di.viewModelsModule
@@ -11,7 +12,7 @@ class LightningMoneyApplication: Application() {
         super.onCreate()
 
         startKoin {
-            modules(listOf(repositoriesModule, viewModelsModule, useCasesModule))
+            modules(listOf(databaseModule, repositoriesModule, viewModelsModule, useCasesModule))
         }
     }
 }
