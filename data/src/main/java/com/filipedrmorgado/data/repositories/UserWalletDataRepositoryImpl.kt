@@ -10,7 +10,7 @@ import com.filipedrmorgado.domain.repository.UserWalletDataRepository
 /**
  * Repository expected to deal with user wallet data
  */
-class UserWalletWalletDataRepositoryImpl(
+class UserWalletDataRepositoryImpl(
     private val userWalletDao: UserWalletDao,
 ) : UserWalletDataRepository {
 
