@@ -1,4 +1,4 @@
-package com.filipedrmorgado.lightningmoney
+package com.filipedrmorgado.lightningmoney.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

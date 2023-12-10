@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/ftu_padding_sides"
+    android:paddingTop="@dimen/ftu_padding_top"
+    android:paddingEnd="@dimen/ftu_padding_sides"
+    tools:context=".ui.ftu.FtuScreenFragment">
+
+    <!-- Guideline to define the weight of the existing layout -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <ImageView
+        android:id="@+id/iv_lightning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_lightning_foreground"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_wallet"
+        style="@style/TextBoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/lightning_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lightning" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/TextRegularDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ftu_wallet_description"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet" />
+
+    <!-- Additional items positioned below the guideline -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BtnLightningWhiteText"
+        android:padding="15dp"
+        android:background="@drawable/btn_background_style"
+        android:text="@string/create_a_new_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_guideline" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_restore_existing_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        style="@style/BtnLightningPurpleText"
+        android:padding="15dp"
+        android:background="@drawable/btn_background_stroke"
+        android:text="@string/restore_existing_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_wallet" />
+
+    <TextView
+        android:id="@+id/tv_additional_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextBottomNote"
+        android:layout_marginTop="5dp"
+        android:text="@string/wallet_note"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_restore_existing_wallet"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LightningMoney</string>
     <string name="lightning_money">Lightning Money</string>
     <string name="ftu_wallet_description">A simple lightning bitcoin wallet for your enjoyment.</string>
     <string name="create_a_new_wallet">Create a new wallet</string>

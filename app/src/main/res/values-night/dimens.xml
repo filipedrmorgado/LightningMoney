@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Text related dimensions -->
+    <!-- Text dimensions -->
     <dimen name="text_size_l">36sp</dimen>
     <dimen name="text_size_m">24sp</dimen>
     <dimen name="text_size_s">15sp</dimen>
