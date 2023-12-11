@@ -16,7 +16,7 @@ val databaseModule = module {
         Room.databaseBuilder(
             androidApplication(),
             UserWalletDatabase::class.java,
-            "my_database"
+            "LightningMoneyDb"
         ).build()
     }
 }
