@@ -4,9 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.filipedrmorgado.lightningmoney.databinding.ActivityMainBinding
 import com.filipedrmorgado.lightningmoney.navigation.NavigationManager
-import com.filipedrmorgado.lightningmoney.navigation.OpenBehaviour
-import com.filipedrmorgado.lightningmoney.navigation.OpenScreen
-import com.filipedrmorgado.lightningmoney.ui.ftu.FtuScreenFragment
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
@@ -24,9 +21,7 @@ class MainActivity : AppCompatActivity() {
         setupInitialScreen()
     }
 
-    /**
-     * Setting up the FTU/Home screen based on if the user already has a wallet
-     */
+
     /**
      * Setting up the FTU/Home screen based on if the user already has a wallet
      */

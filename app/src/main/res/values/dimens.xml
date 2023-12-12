@@ -9,5 +9,9 @@
     <dimen name="ftu_padding_sides">20dp</dimen>
     <dimen name="ftu_padding_top">100dp</dimen>
     <dimen name="btn_corner_radius">5dp</dimen>
+    <dimen name="ftu_wallet_name_margin_top">30dp</dimen>
+    <dimen name="ftu_wallet_desc_margin_top">10dp</dimen>
+    <dimen name="btn_medium_padding">15dp</dimen>
+    <dimen name="btn_margin_top">5dp</dimen>
 
 </resources>
