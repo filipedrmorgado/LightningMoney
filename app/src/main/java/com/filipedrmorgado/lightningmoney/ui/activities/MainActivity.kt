@@ -3,15 +3,10 @@ package com.filipedrmorgado.lightningmoney.ui.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.filipedrmorgado.lightningmoney.databinding.ActivityMainBinding
-import com.filipedrmorgado.lightningmoney.navigation.NavigationManager
-import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    //todo review logic on how to get the fragmentManager
-    private val navigationManager: NavigationManager by inject()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,17 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         if (hasWallet) {
             // Navigate to another screen (replace this with your actual logic)
-            //navigationManager.navigateTo(OpenScreen(/* provide details for the screen to navigate to */))
         } else {
             // If the user doesn't have a wallet, navigate to FtuScreenFragment
-           /* navigationManager.navigateTo(
-                OpenScreen(
-                    FtuScreenFragment::class.java,
-                    binding.fcvMain.id,
-                    false,
-                    OpenBehaviour.ADD
-                )
-            )*/
+            //todo logic related to navigation graph
+
         }
     }
 
