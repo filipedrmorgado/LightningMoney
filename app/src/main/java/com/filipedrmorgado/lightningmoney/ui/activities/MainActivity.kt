@@ -2,7 +2,9 @@ package com.filipedrmorgado.lightningmoney.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.ActivityMainBinding
+import com.filipedrmorgado.lightningmoney.ui.ftu.FtuScreenFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,13 +25,13 @@ class MainActivity : AppCompatActivity() {
     private fun setupInitialScreen() {
         val hasWallet = false //todo finish logic
 
-        if (hasWallet) {
+        if (hasWallet ) {
             // Navigate to another screen (replace this with your actual logic)
         } else {
             // If the user doesn't have a wallet, navigate to FtuScreenFragment
-            //todo logic related to navigation graph
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fcv_main, FtuScreenFragment())
+                .commit()
         }
     }
-
-
 }
