@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             // If the user doesn't have a wallet, navigate to FtuScreenFragment
             //todo logic related to navigation graph
-
         }
     }
 
