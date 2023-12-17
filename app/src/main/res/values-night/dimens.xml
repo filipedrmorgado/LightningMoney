@@ -4,7 +4,7 @@
     <!-- Text dimensions -->
     <dimen name="text_size_l">36sp</dimen>
     <dimen name="text_size_m">24sp</dimen>
-    <dimen name="text_size_s">15sp</dimen>
+    <dimen name="text_size_xs">15sp</dimen>
 
     <!-- FTU dimensions -->
     <dimen name="ftu_padding_sides">20dp</dimen>

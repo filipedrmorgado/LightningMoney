@@ -9,7 +9,7 @@
         android:id="@+id/FtuScreenFragment"
         android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuScreenFragment"
         android:label="@string/ftu_screen_fragment"
-        tools:layout="@layout/welcome_screen_fragment">
+        tools:layout="@layout/ftu_welcome_screen_fragment">
 
     </fragment>
 

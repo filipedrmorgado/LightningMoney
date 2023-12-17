@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
-import com.filipedrmorgado.lightningmoney.databinding.WelcomeScreenFragmentBinding
+import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBinding
 import org.koin.core.component.KoinComponent
 
 /**
@@ -17,7 +17,7 @@ import org.koin.core.component.KoinComponent
  */
 class FtuScreenFragment : Fragment(), KoinComponent {
 
-    private lateinit var binding:  WelcomeScreenFragmentBinding
+    private lateinit var binding:  FtuWelcomeScreenFragmentBinding
     private lateinit var navController: NavController
     private val ftuViewModel: FtuViewModel by activityViewModels()
 
@@ -26,7 +26,7 @@ class FtuScreenFragment : Fragment(), KoinComponent {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = WelcomeScreenFragmentBinding.inflate(inflater, container, false)
+        binding = FtuWelcomeScreenFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

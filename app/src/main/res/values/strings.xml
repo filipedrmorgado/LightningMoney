@@ -6,4 +6,5 @@
     <string name="ftu_screen_fragment">Ftu Screen Fragment</string>
     <string name="restore_existing_wallet">Restore existing wallet</string>
     <string name="wallet_note">Your wallet, your coins</string>
+    <string name="txt_back">Back</string>
 </resources>
