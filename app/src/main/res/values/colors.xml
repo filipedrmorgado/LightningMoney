@@ -4,6 +4,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lightGrey">#777777</color>
+    <color name="clearGrey">#dedede</color>
     <color name="whitishGrey">#BBBBBB</color>
     <color name="lightningColor">#7b1af7</color>
 

@@ -6,7 +6,7 @@
     </style>
 
     <style name="Text.BoldTitle" parent="">
-        <item name="android:textSize">@dimen/text_size_l</item>
+        <item name="android:textSize">@dimen/text_size_xl</item>
         <item name="fontFamily">@font/inter_semi_bold</item>
         <item name="color">@color/black</item>
     </style>
@@ -16,6 +16,13 @@
         <item name="android:fontFamily">@font/inter_regular</item>
         <item name="android:textColor">@color/lightGrey</item>
         <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="TextAgreementDescription" parent="">
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/lightGrey</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
     </style>
 
     <style name="TextToolbarStyle" parent="">

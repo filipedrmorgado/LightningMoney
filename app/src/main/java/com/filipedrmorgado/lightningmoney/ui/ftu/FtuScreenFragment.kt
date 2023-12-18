@@ -13,7 +13,7 @@ import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBi
 import org.koin.core.component.KoinComponent
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * This fragment will deal with First Time Use of the application by the user.
  */
 class FtuScreenFragment : Fragment(), KoinComponent {
 

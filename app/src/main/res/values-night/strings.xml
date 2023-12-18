@@ -7,4 +7,6 @@
     <string name="restore_existing_wallet">Restore existing wallet</string>
     <string name="wallet_note">Your wallet, your coins</string>
     <string name="txt_back">Back</string>
+    <string name="ftu_agreement">Two things you must understand</string>
+    <string name="ftu_first_consent_text">With bitcoin, you are your own bank. No one else has access to your private keys</string>
 </resources>

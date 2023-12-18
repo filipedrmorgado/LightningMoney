@@ -13,6 +13,118 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/iv_lightning"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_agreement"
+        android:importantForAccessibility="no"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarLayout"
+        tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/tv_wallet"
+        style="@style/TextBoldDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="350dp"
+        android:layout_marginTop="15dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/ftu_agreement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lightning" />
+
+    <ImageView
+        android:id="@+id/iv_firstSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clearGrey"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet" />
+
+    <!-- Text on the left -->
+    <TextView
+        android:id="@+id/tv_firstConsent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAgreementDescription"
+        android:text="@string/ftu_first_consent_text"
+        android:layout_marginStart="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@id/swt_firsConsent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_firstSeparator" />
+
+    <!-- Toggle switch on the right -->
+    <Switch
+        android:id="@+id/swt_firsConsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_firstConsent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_firstConsent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_firstConsent" />
+
+    <ImageView
+        android:id="@+id/iv_secondSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clearGrey"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_firstConsent" />
+
+    <!-- Text on the left -->
+    <TextView
+        android:id="@+id/tv_secondConsent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAgreementDescription"
+        android:text="@string/ftu_first_consent_text"
+        android:layout_marginStart="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@id/swt_secondConsent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_secondSeparator" />
+
+    <!--todo here, update the switch with correct  -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swt_secondConsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:track="@drawable/switch_thumb_selector"
+        app:thumbTint="@color/white"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_secondConsent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_secondConsent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_secondConsent" />
+
+    <ImageView
+        android:id="@+id/iv_thirdSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clearGrey"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_secondConsent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

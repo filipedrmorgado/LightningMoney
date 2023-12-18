@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Text dimensions -->
-    <dimen name="text_size_l">36sp</dimen>
+    <dimen name="text_size_xl">36sp</dimen>
     <dimen name="text_size_m">24sp</dimen>
     <dimen name="text_size_xs">15sp</dimen>
 
