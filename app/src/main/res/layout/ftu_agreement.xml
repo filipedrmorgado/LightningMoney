@@ -61,16 +61,19 @@
         android:layout_marginStart="30dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
         app:layout_constraintEnd_toStartOf="@id/swt_firsConsent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_firstSeparator" />
 
     <!-- Toggle switch on the right -->
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swt_firsConsent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
+        app:track="@drawable/switch_thumb_selector"
+        app:thumbTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_firstConsent"
         app:layout_constraintBottom_toBottomOf="@id/tv_firstConsent"
@@ -94,15 +97,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/TextAgreementDescription"
-        android:text="@string/ftu_first_consent_text"
+        android:text="@string/ftu_second_consent_text"
         android:layout_marginStart="30dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
         app:layout_constraintEnd_toStartOf="@id/swt_secondConsent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_secondSeparator" />
 
-    <!--todo here, update the switch with correct  -->
+    <!--todo here, update the switch with correct colors -->
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swt_secondConsent"
         android:layout_width="wrap_content"
@@ -126,5 +130,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_secondConsent" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_restore_existing_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/btn_margin_top"
+        style="@style/BtnLightningPurpleText"
+        android:padding="@dimen/btn_medium_padding"
+        android:background="@drawable/btn_background_stroke"
+        android:text="@string/restore_existing_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_wallet" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
