@@ -10,4 +10,5 @@
     <string name="ftu_agreement">Two things you must understand</string>
     <string name="ftu_first_consent_text">With bitcoin, you are your own bank. No one else has access to your private keys</string>
     <string name="ftu_second_consent_text">If you lose access to this app, and the backup we will help you create, your bitcoin cannot be recovered.</string>
+    <string name="btn_next">Next</string>
 </resources>

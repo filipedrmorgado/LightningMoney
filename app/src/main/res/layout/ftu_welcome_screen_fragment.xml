@@ -72,7 +72,7 @@
         android:layout_marginTop="@dimen/btn_margin_top"
         style="@style/BtnLightningPurpleText"
         android:padding="@dimen/btn_medium_padding"
-        android:background="@drawable/btn_background_stroke"
+        android:background="@drawable/btn_background_stroke_bg_purple"
         android:text="@string/restore_existing_wallet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
