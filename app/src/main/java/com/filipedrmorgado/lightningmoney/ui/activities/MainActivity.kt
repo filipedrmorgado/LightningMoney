@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.ActivityMainBinding
+import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBinding
 import com.filipedrmorgado.lightningmoney.ui.ftu.FtuAgreementFragment
 import com.filipedrmorgado.lightningmoney.ui.ftu.FtuScreenFragment
 
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             // If the user doesn't have a wallet, navigate to FtuScreenFragment
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fcv_main, FtuAgreementFragment())
+                .replace(R.id.fcv_main, FtuScreenFragment())
                 .commit()
         }
     }

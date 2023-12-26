@@ -11,4 +11,7 @@
     <string name="ftu_first_consent_text">With bitcoin, you are your own bank. No one else has access to your private keys</string>
     <string name="ftu_second_consent_text">If you lose access to this app, and the backup we will help you create, your bitcoin cannot be recovered.</string>
     <string name="btn_next">Next</string>
+    <string name="ftu_name_your_wallet">Name your wallet</string>
+    <string name="tv_wallet_name_hint">Wallet name</string>
+    <string name="ftu_finish_wallet_creation">Finish Creation</string>
 </resources>
