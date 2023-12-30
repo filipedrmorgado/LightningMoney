@@ -10,10 +10,23 @@
     <!-- FTU dimensions -->
     <dimen name="ftu_padding_sides">20dp</dimen>
     <dimen name="ftu_padding_top">100dp</dimen>
+    <dimen name="ftu_custom_max_width">350dp</dimen>
+    <dimen name="ftu_consent_logo_fixed_size">60dp</dimen>
+
+    <!-- btn dimensions -->
     <dimen name="btn_corner_radius">5dp</dimen>
-    <dimen name="ftu_wallet_name_margin_top">30dp</dimen>
-    <dimen name="ftu_wallet_desc_margin_top">10dp</dimen>
     <dimen name="btn_medium_padding">15dp</dimen>
     <dimen name="btn_margin_top">5dp</dimen>
+
+    <!-- general dimensions -->
+    <dimen name="general_margin_padding_30">30dp</dimen>
+    <dimen name="general_margin_padding_25">25dp</dimen>
+    <dimen name="general_margin_padding_20">20dp</dimen>
+    <dimen name="general_margin_padding_18">18dp</dimen>
+    <dimen name="general_margin_padding_15">15dp</dimen>
+    <dimen name="general_margin_padding_12">12dp</dimen>
+    <dimen name="general_margin_padding_10">10dp</dimen>
+    <dimen name="general_margin_padding_5">5dp</dimen>
+
 
 </resources>

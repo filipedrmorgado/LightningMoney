@@ -18,26 +18,25 @@
         style="@style/TextMediumSemiBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="350dp"
-        android:layout_marginTop="15dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
+        android:maxWidth="@dimen/ftu_custom_max_width"
+        android:layout_marginTop="@dimen/general_margin_padding_15"
+        android:paddingStart="@dimen/general_margin_padding_30"
+        android:paddingEnd="@dimen/general_margin_padding_30"
         android:text="@string/ftu_name_your_wallet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLayout" />
-
 
     <TextView
         android:id="@+id/tv_name_wallet_desc"
         style="@style/TextAgreementDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="350dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:text="Maximum of 7 letters."
+        android:maxWidth="@dimen/ftu_custom_max_width"
+        android:layout_marginTop="@dimen/general_margin_padding_5"
+        android:paddingStart="@dimen/general_margin_padding_30"
+        android:paddingEnd="@dimen/general_margin_padding_30"
+        android:text="@string/ftu_wallet_name_max_letters"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_wallet" />
@@ -46,9 +45,9 @@
         android:id="@+id/til_input_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:layout_marginTop="@dimen/general_margin_padding_25"
+        android:paddingStart="@dimen/general_margin_padding_20"
+        android:paddingEnd="@dimen/general_margin_padding_20"
         app:layout_constraintTop_toBottomOf="@id/tv_name_wallet_desc"
         app:boxBackgroundMode="outline">
 
@@ -61,8 +60,6 @@
             android:hint="@string/tv_wallet_name_hint" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_restore_existing_wallet"
