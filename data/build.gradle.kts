@@ -45,6 +45,15 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.room:room-ktx:2.6.1")
 
+    // Retrofit, GSON, HTTP Requests, API response and more
+    implementation("com.squareup.okhttp3:okhttp:4.5.0")
+    // API Response.body json to map
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    kaptTest("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
     // Test
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
