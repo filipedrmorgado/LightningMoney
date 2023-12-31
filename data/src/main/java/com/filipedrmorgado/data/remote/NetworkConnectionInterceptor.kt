@@ -8,7 +8,9 @@ import com.filipedrmorgado.data.utils.active_connection
 import okhttp3.Interceptor
 import okhttp3.Response
 
-// Check if it has internet available
+/**
+ * Checks if it has internet available
+ */
 class NetworkConnectionInterceptor(
     context: Context
 ) : Interceptor {
