@@ -9,7 +9,8 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 /**
- * Checks if it has internet available
+ * An OkHttp interceptor for checking network connectivity before making API requests.
+ * Throws [NoInternetException] if no internet connection is available.
  */
 class NetworkConnectionInterceptor(
     context: Context
@@ -17,6 +18,12 @@ class NetworkConnectionInterceptor(
 
     private val applicationContext = context.applicationContext
 
+    /**
+     * Intercepts the OkHttp request and checks for internet connectivity.
+     *
+     * @param chain The OkHttp interceptor chain.
+     * @return The response if internet is available; otherwise, throws [NoInternetException].
+     */
     override fun intercept(chain: Interceptor.Chain): Response {
         if (!isInternetAvailable())
             throw NoInternetException(active_connection)
@@ -25,6 +32,11 @@ class NetworkConnectionInterceptor(
             .build())
     }
 
+    /**
+     * Checks if the device has internet connectivity.
+     *
+     * @return `true` if internet is available, `false` otherwise.
+     */
     private fun isInternetAvailable(): Boolean {
         var result = false
         val connectivityManager = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?

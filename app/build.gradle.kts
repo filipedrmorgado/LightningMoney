@@ -45,6 +45,7 @@ dependencies {
     // Module dependencies
     implementation(project(":domain"))
     implementation(project(":di"))
+    implementation(project(":data"))
 
     // Core
     implementation("androidx.core:core-ktx:1.12.0")

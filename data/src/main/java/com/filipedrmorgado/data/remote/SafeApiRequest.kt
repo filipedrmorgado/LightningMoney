@@ -5,8 +5,20 @@ import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Response
 
+/**
+ * A base class for making safe API requests using Retrofit.
+ * It handles the response and provides error handling for unsuccessful requests.
+ */
 abstract class SafeApiRequest {
 
+
+    /**
+     * Executes the API request in a safe manner.
+     *
+     * @param call A suspend function that performs the Retrofit API call.
+     * @return The successful response body.
+     * @throws ApiException If the API request is unsuccessful.
+     */
     suspend fun <T : Any> apiRequest(call: suspend () -> Response<T>): T {
         val response = call.invoke()
 

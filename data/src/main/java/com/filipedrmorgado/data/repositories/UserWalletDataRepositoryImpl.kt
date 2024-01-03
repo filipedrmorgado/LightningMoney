@@ -4,6 +4,7 @@ import com.filipedrmorgado.data.database.Entities.UserWalletEntity
 import com.filipedrmorgado.data.database.dao.UserWalletDao
 import com.filipedrmorgado.data.mapper.mapFromEntity
 import com.filipedrmorgado.data.mapper.mapToEntity
+import com.filipedrmorgado.data.remote.api.LightningAPI
 import com.filipedrmorgado.domain.model.UserWallet
 import com.filipedrmorgado.domain.repository.UserWalletDataRepository
 
@@ -12,6 +13,7 @@ import com.filipedrmorgado.domain.repository.UserWalletDataRepository
  */
 class UserWalletDataRepositoryImpl(
     private val userWalletDao: UserWalletDao,
+    private val lightningAPI: LightningAPI,
 ) : UserWalletDataRepository {
 
 
