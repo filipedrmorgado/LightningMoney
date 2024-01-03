@@ -10,7 +10,6 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.FtuAgreementBinding
-import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBinding
 import org.koin.core.component.KoinComponent
 
 /**
@@ -31,9 +30,34 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Initializing the NavController
         navController = Navigation.findNavController(requireActivity(), R.id.fcv_main)
+        setupObservers()
+    }
+
+
+    /**
+     * Sets behaviour for the back behaviour in toolbar and Next screen logic.
+     */
+    private fun setupObservers() {
+        // Set OnClickListener for the back behaviour
+        binding.toolbarLayout.toolbar.setOnClickListener {
+            navController.popBackStack()
+        }
+
+        binding.btnAgreementNext.setOnClickListener {
+            val isFirstConsentChecked = binding.swtFirsConsent.isChecked
+            val isSecondConsentChecked = binding.swtSecondConsent.isChecked
+
+            if(isFirstConsentChecked && isSecondConsentChecked) {
+                navController.navigate(R.id.action_FtuAgreementFragment_to_FtuWalletName)
+            } else {
+
+            }
+        }
+
     }
 }

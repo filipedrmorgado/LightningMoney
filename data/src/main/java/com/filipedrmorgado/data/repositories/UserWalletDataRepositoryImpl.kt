@@ -17,6 +17,11 @@ class UserWalletDataRepositoryImpl(
 ) : UserWalletDataRepository {
 
 
+    init {
+        //todo obtain key to sign requests to API, or, find a way to do it any other way.
+
+    }
+
     /**
      * Retrieve the user wallet information.
      *

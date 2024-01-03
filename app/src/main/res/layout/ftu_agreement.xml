@@ -136,7 +136,7 @@
         android:importantForAccessibility="no" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_restore_existing_wallet"
+        android:id="@+id/btn_agreement_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/general_margin_padding_20"

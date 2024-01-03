@@ -15,4 +15,6 @@
     <string name="tv_wallet_name_hint">Wallet name</string>
     <string name="ftu_finish_wallet_creation">Finish Creation</string>
     <string name="ftu_wallet_name_max_letters">Maximum of 7 letters.</string>
+    <string name="ftu_agreement_screen">Ftu agreement screen</string>
+    <string name="ftu_wallet_name">Ftu Wallet Name</string>
 </resources>

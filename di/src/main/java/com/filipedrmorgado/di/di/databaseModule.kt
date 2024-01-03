@@ -1,4 +1,4 @@
-package com.filipedrmorgado.di
+package com.filipedrmorgado.di.di
 
 import androidx.room.Room
 import com.filipedrmorgado.data.database.UserWalletDatabase

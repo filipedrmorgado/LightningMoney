@@ -11,6 +11,29 @@
         android:label="@string/ftu_screen_fragment"
         tools:layout="@layout/ftu_welcome_screen_fragment">
 
+        <action
+            android:id="@+id/action_FtuScreenFragment_to_FtuAgreementFragment"
+            app:destination="@id/FtuAgreementFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/FtuAgreementFragment"
+        android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuAgreementFragment"
+        android:label="@string/ftu_agreement_screen"
+        tools:layout="@layout/ftu_agreement">
+
+        <action
+            android:id="@+id/action_FtuAgreementFragment_to_FtuWalletName"
+            app:destination="@id/FtuWalletName" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/FtuWalletName"
+        android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuWalletNameFragment"
+        android:label="@string/ftu_wallet_name"
+        tools:layout="@layout/ftu_wallet_name">
     </fragment>
 
 </navigation>

@@ -34,5 +34,12 @@ class FtuScreenFragment : Fragment(), KoinComponent {
         super.onViewCreated(view, savedInstanceState)
         // Initializing the NavController
         navController = Navigation.findNavController(requireActivity(), R.id.fcv_main)
+        setupObservers()
+    }
+
+    private fun setupObservers() {
+        binding.btnCreateWallet.setOnClickListener {
+            navController.navigate(R.id.action_FtuScreenFragment_to_FtuAgreementFragment)
+        }
     }
 }
