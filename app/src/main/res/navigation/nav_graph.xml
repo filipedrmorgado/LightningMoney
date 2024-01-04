@@ -21,7 +21,7 @@
         android:id="@+id/FtuAgreementFragment"
         android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuAgreementFragment"
         android:label="@string/ftu_agreement_screen"
-        tools:layout="@layout/ftu_agreement">
+        tools:layout="@layout/ftu_agreement_fragment">
 
         <action
             android:id="@+id/action_FtuAgreementFragment_to_FtuWalletName"
@@ -33,7 +33,7 @@
         android:id="@+id/FtuWalletName"
         android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuWalletNameFragment"
         android:label="@string/ftu_wallet_name"
-        tools:layout="@layout/ftu_wallet_name">
+        tools:layout="@layout/ftu_wallet_name_fragment">
     </fragment>
 
 </navigation>

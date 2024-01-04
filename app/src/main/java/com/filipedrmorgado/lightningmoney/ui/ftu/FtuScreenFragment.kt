@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBinding
+import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
 import org.koin.core.component.KoinComponent
 
 /**

@@ -9,7 +9,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
-import com.filipedrmorgado.lightningmoney.databinding.FtuAgreementBinding
+import com.filipedrmorgado.lightningmoney.databinding.FtuAgreementFragmentBinding
+import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
 import org.koin.core.component.KoinComponent
 
 /**
@@ -17,7 +18,7 @@ import org.koin.core.component.KoinComponent
  */
 class FtuAgreementFragment : Fragment(), KoinComponent {
 
-    private lateinit var binding:  FtuAgreementBinding
+    private lateinit var binding:  FtuAgreementFragmentBinding
     private lateinit var navController: NavController
     private val ftuViewModel: FtuViewModel by activityViewModels()
 
@@ -26,7 +27,7 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FtuAgreementBinding.inflate(inflater, container, false)
+        binding = FtuAgreementFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -44,7 +45,11 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
      */
     private fun setupObservers() {
         // Set OnClickListener for the back behaviour
-        binding.toolbarLayout.toolbar.setOnClickListener {
+        binding.toolbarLayout.btnBack.setOnClickListener {
+            navController.popBackStack()
+        }
+
+        binding.toolbarLayout.toolbarTitle .setOnClickListener {
             navController.popBackStack()
         }
 
