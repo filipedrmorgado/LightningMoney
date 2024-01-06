@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/general_margin_padding_20"
+    android:paddingEnd="@dimen/general_margin_padding_20"
+    android:paddingBottom="@dimen/general_margin_padding_20">
 
+    <include
+        android:id="@+id/toolbarLayout"
+        layout="@layout/home_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_wallet_name"
+        style="@style/TextHomeWalletTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_margin_padding_50"
+        android:text="@string/default_wallet_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout" />
 
+    <TextView
+        android:id="@+id/tv_wallet_balance"
+        style="@style/TextWalletBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/home_balance_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet_name" />
+
+    <TextView
+        android:id="@+id/tv_wallet_secondary_balance"
+        style="@style/TextSecondaryBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_margin_padding_5"
+        android:text="@string/home_secondary_balance_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet_balance" />
+
+    <!-- Bottom layer buttons -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--todo deal with height and width dinamically -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send"
+            style="@style/HomeScreenBtnStyle"
+            android:layout_width="@dimen/general_base_0dp"
+            android:layout_height="@dimen/btn_home_height"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_arrow_up"
+            android:layout_marginEnd="@dimen/general_margin_padding_10"
+            android:layout_marginStart="0dp"
+            android:paddingTop="@dimen/general_margin_padding_15"
+            android:background="@drawable/btn_background_stroke_bg_purple"
+            android:text="@string/tv_home_btn_send" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_scan"
+            style="@style/HomeScreenBtnStyle"
+            android:layout_width="@dimen/general_base_0dp"
+            android:layout_height="@dimen/btn_home_height"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_qr_code"
+            android:layout_marginEnd="@dimen/general_margin_padding_10"
+            android:layout_marginStart="0dp"
+            android:paddingTop="@dimen/general_margin_padding_15"
+            android:background="@drawable/btn_background_stroke_bg_purple"
+            android:text="@string/tv_home_btn_scan" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_receive"
+            style="@style/HomeScreenBtnStyle"
+            android:layout_width="@dimen/general_base_0dp"
+            android:layout_height="@dimen/btn_home_height"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_arrow_down"
+            android:paddingTop="@dimen/general_margin_padding_15"
+            android:background="@drawable/btn_background_stroke_bg_purple"
+            android:text="@string/tv_home_btn_receive" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

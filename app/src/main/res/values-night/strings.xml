@@ -17,4 +17,10 @@
     <string name="ftu_wallet_name_max_letters">Maximum of 7 letters.</string>
     <string name="ftu_agreement_screen">Ftu agreement screen</string>
     <string name="ftu_wallet_name">Ftu Wallet Name</string>
+    <string name="default_wallet_name">Wallet Name</string>
+    <string name="home_balance_example">372,000,500 sats</string>
+    <string name="home_secondary_balance_example">€ 202,564.72</string>
+    <string name="tv_home_btn_send">Send</string>
+    <string name="tv_home_btn_scan">Scan</string>
+    <string name="tv_home_btn_receive">Receive</string>
 </resources>
