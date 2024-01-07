@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingStart="@dimen/general_margin_padding_20"
@@ -47,6 +48,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_wallet_balance" />
+
+    <!--todo check the necessity to make the sizes dynamic, unlikely -->
+    <LinearLayout
+        android:id="@+id/ll_transactions_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/general_margin_padding_30"
+        android:paddingStart="@dimen/general_margin_padding_20"
+        android:paddingEnd="@dimen/general_margin_padding_20"
+        android:paddingTop="@dimen/general_margin_padding_5"
+        android:paddingBottom="@dimen/general_margin_padding_5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:ignore="UseCompoundDrawables"
+        android:background="@drawable/btn_background_stroke_bg_light_grey_big_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom_buttons">
+
+        <ImageView
+            android:id="@+id/ic_chevron_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chevron_up"
+            android:layout_gravity="center_vertical"
+            android:importantForAccessibility="no" />
+
+        <!-- text string to be updated depending on user transactions -->
+        <TextView
+            android:id="@+id/tv_transactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_default_transactions"
+            style="@style/TextSecondaryBalance"/>
+    </LinearLayout>
 
     <!-- Bottom layer buttons -->
     <LinearLayout

@@ -23,4 +23,5 @@
     <string name="tv_home_btn_send">Send</string>
     <string name="tv_home_btn_scan">Scan</string>
     <string name="tv_home_btn_receive">Receive</string>
+    <string name="home_default_transactions">No transactions yet</string>
 </resources>

@@ -5,8 +5,9 @@
     <dimen name="text_size_xl">32sp</dimen>
     <dimen name="text_size_l">27sp</dimen>
     <dimen name="text_size_m">24sp</dimen>
-    <dimen name="text_size_s">18sp</dimen>
-    <dimen name="text_size_xs">15sp</dimen>
+    <dimen name="text_size_s">21sp</dimen>
+    <dimen name="text_size_xs">18sp</dimen>
+    <dimen name="text_size_xxs">15sp</dimen>
 
     <!-- FTU dimensions -->
     <dimen name="ftu_padding_sides">20dp</dimen>
@@ -33,6 +34,6 @@
     <dimen name="general_margin_padding_12">12dp</dimen>
     <dimen name="general_margin_padding_10">10dp</dimen>
     <dimen name="general_margin_padding_5">5dp</dimen>
-    <dimen name="general_base_0dp">5dp</dimen>
+    <dimen name="general_base_0dp">0dp</dimen>
 
 </resources>
