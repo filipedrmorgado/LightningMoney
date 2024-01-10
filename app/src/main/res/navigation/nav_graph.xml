@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/FtuWalletName"
-        android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuWalletNameFragment"
+        android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuCreateWalletFragment"
         android:label="@string/ftu_wallet_name"
-        tools:layout="@layout/ftu_wallet_name_fragment">
+        tools:layout="@layout/ftu_create_wallet_fragment">
     </fragment>
 
 </navigation>

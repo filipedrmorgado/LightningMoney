@@ -13,8 +13,8 @@
     <string name="btn_next">Next</string>
     <string name="ftu_name_your_wallet">Name your wallet</string>
     <string name="tv_wallet_name_hint">Wallet name</string>
-    <string name="ftu_finish_wallet_creation">Finish Creation</string>
-    <string name="ftu_wallet_name_max_letters">Maximum of 7 letters.</string>
+    <string name="ftu_finish_wallet_creation">Create Wallet</string>
+    <string name="ftu_wallet_name_max_letters">Maximum of 10 letters.</string>
     <string name="ftu_agreement_screen">Ftu agreement screen</string>
     <string name="ftu_wallet_name">Ftu Wallet Name</string>
     <string name="default_wallet_name">Wallet Name</string>
