@@ -110,3 +110,21 @@ Using this text, we follow certain conventions and principles for the different 
 **Interactors Absent Scenario:**
 
 In cases where Interactors are not present, the business logic typically resides within the Use Case itself. The Use Case directly handles the application's business logic, calling repositories and preparing the state to be returned to the ViewModel. This approach maintains separation of concerns and allows for a clean and modular architecture.
+
+## License
+
+ ```
+   Copyright 2019 David Odari
+   
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ ```
