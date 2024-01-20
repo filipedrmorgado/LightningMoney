@@ -9,7 +9,7 @@ In addition to this, later in development, a new branch will be created in the e
 If you want to take a deeper dive into what the Lightning Network is about, please take a look at my [internship report](assets/Filipe_Morgado_MobileMoney_BlockchainTransactions.pdf) `chapters 2,3 and 4` about it.
 
 In this application, I will be using [LNbits](www.lnbits.com) as the main provider for everything needed regarding trading bitcoin using the LN. [LNbits API](https://legend.lnbits.com/docs#/default/api_create_wallet_api_v1_wallet_post) will make it possible to manage a Lightning Network Bitcoin wallet.
-They also provide a [demo](https://legend.lnbits.com/) in which you can sue to create your own wallet and trade real bitcoin using the LN. 
+They also provide a [demo](https://legend.lnbits.com/) in which you can use to create your own wallet and trade real bitcoin using the LN on the browser. The experience in the application is expected to be the same. 
 
 # Disclaimer: 
 
