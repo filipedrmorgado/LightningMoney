@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.FtuWelcomeScreenFragmentBinding
 import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
 /**
@@ -20,7 +20,7 @@ class FtuScreenFragment : Fragment(), KoinComponent {
 
     private lateinit var binding:  FtuWelcomeScreenFragmentBinding
     private lateinit var navController: NavController
-    private val ftuViewModel: FtuViewModel by activityViewModels()
+    private val ftuViewModel: FtuViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,

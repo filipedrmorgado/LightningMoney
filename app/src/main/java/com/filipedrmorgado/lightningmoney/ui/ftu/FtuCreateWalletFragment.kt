@@ -5,29 +5,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
-import com.filipedrmorgado.lightningmoney.databinding.FtuWalletNameFragmentBinding
+import com.filipedrmorgado.lightningmoney.databinding.FtuCreateWalletFragmentBinding
 import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
 /**
  * This fragment will deal with First Time Use of the application by the user.
  */
-class FtuWalletNameFragment : Fragment(), KoinComponent {
+class FtuCreateWalletFragment : Fragment(), KoinComponent {
 
-    private lateinit var binding:  FtuWalletNameFragmentBinding
+    private lateinit var binding:  FtuCreateWalletFragmentBinding
     private lateinit var navController: NavController
-    private val ftuViewModel: FtuViewModel by activityViewModels()
+    private val ftuViewModel: FtuViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FtuWalletNameFragmentBinding.inflate(inflater, container, false)
+        binding = FtuCreateWalletFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -46,6 +46,10 @@ class FtuWalletNameFragment : Fragment(), KoinComponent {
 
         binding.toolbarLayout.toolbarTitle .setOnClickListener {
             navController.popBackStack()
+        }
+
+        binding.btnCreateWallet.setOnClickListener {
+            ftuViewModel.createWallet(binding.tvNameWallet.text.toString())
         }
     }
 }

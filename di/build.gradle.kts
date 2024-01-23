@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -45,8 +46,11 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
 
     // Koin
-    implementation("io.insert-koin:koin-android:3.1.2")
+    implementation("io.insert-koin:koin-android:3.5.3")
+
+    // Room
     implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
     // Test
     testImplementation("junit:junit:4.13.2")

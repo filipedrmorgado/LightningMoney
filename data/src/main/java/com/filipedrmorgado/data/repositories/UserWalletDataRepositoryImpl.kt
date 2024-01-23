@@ -1,10 +1,13 @@
 package com.filipedrmorgado.data.repositories
 
+import android.util.Log
 import com.filipedrmorgado.data.database.Entities.UserWalletEntity
 import com.filipedrmorgado.data.database.dao.UserWalletDao
 import com.filipedrmorgado.data.mapper.mapFromEntity
 import com.filipedrmorgado.data.mapper.mapToEntity
+import com.filipedrmorgado.data.remote.SafeApiRequest
 import com.filipedrmorgado.data.remote.api.LightningAPI
+import com.filipedrmorgado.data.utils.createJsonRequestBody
 import com.filipedrmorgado.domain.model.UserWallet
 import com.filipedrmorgado.domain.repository.UserWalletDataRepository
 
@@ -14,13 +17,36 @@ import com.filipedrmorgado.domain.repository.UserWalletDataRepository
 class UserWalletDataRepositoryImpl(
     private val userWalletDao: UserWalletDao,
     private val lightningAPI: LightningAPI,
-) : UserWalletDataRepository {
+    //private val defaultDispatcher: CoroutineDispatcher = Dispatchers.IO,
+) : UserWalletDataRepository, SafeApiRequest() {
 
 
     init {
         //todo obtain key to sign requests to API, or, find a way to do it any other way.
 
     }
+
+    /**
+     * To create a LNbits account there is a need to:
+     * - First: create an account
+     * - Second: create a wallet in the account just created
+     *
+     * @return `true` if created with success, `false` otherwise
+     */
+    suspend fun createUserWallet(walletName: String) {
+
+        //todo wallet creation, create account, then wallet.
+        /*val result = lightningAPI.createWallet(
+
+        )*/
+
+        val walletCreationResponse = apiRequest {
+            lightningAPI.createWallet(
+            createJsonRequestBody("name" to walletName))
+        }
+        Log.d(Log.DEBUG.toString(),"walletCreationResponse=$walletCreationResponse")
+    }
+
 
     /**
      * Retrieve the user wallet information.

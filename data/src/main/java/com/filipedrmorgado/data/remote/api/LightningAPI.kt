@@ -3,7 +3,7 @@ package com.filipedrmorgado.data.remote.api
 import com.filipedrmorgado.data.remote.NetworkConnectionInterceptor
 import com.filipedrmorgado.data.remote.response.WalletBalance
 import com.filipedrmorgado.data.remote.response.WalletCheckInvoice
-import com.filipedrmorgado.data.remote.response.WalletCreationDetails
+import com.filipedrmorgado.data.remote.response.WalletCreation
 import com.filipedrmorgado.data.remote.response.WalletDecodeInvoice
 import com.filipedrmorgado.data.remote.response.WalletInvoiceCreation
 import com.filipedrmorgado.data.remote.response.WalletPayInvoice
@@ -28,9 +28,10 @@ interface LightningAPI {
     @Headers(http_lightning_content_type)
     @POST(url_create_wallet)
     suspend fun createWallet(
-        @Header("X-Api-Key") apiKey: String,
+        //todo finish logic for create wallet api req
+        //@Header("X-Api-Key") apiKey: String,
         @Body params: RequestBody
-    ) : Response<WalletCreationDetails>
+    ) : Response<WalletCreation>
 
     @Headers(http_lightning_content_type)
     @GET
