@@ -1,4 +1,4 @@
-package com.filipedrmorgado.lightningmoney.ui.ftu
+package com.filipedrmorgado.lightningmoney.ui.homescreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,18 +8,19 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
-import com.filipedrmorgado.lightningmoney.databinding.FtuAgreementFragmentBinding
+import com.filipedrmorgado.lightningmoney.databinding.HomeScreenFragmentBinding
 import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
 /**
- * This fragment will deal with First Time Use Agreement screen of the application by the user.
+ * This fragment will deal with the home screen of the application.
  */
-class FtuAgreementFragment : Fragment(), KoinComponent {
+class HomeScreenFragment : Fragment(), KoinComponent {
 
-    private lateinit var binding:  FtuAgreementFragmentBinding
+    private lateinit var binding: HomeScreenFragmentBinding
     private lateinit var navController: NavController
+    //todo change to HomeScreenViewModel
     private val ftuViewModel: FtuViewModel by viewModel()
 
     override fun onCreateView(
@@ -27,7 +28,7 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FtuAgreementFragmentBinding.inflate(inflater, container, false)
+        binding = HomeScreenFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -45,24 +46,12 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
      */
     private fun setupObservers() {
         // Set OnClickListener for the back behaviour
-        binding.toolbarLayout.btnBack.setOnClickListener {
-            navController.popBackStack()
+        binding.toolbarLayout.btnProfile.setOnClickListener {
+            //todo implement profile section
         }
 
-        binding.toolbarLayout.toolbarTitle .setOnClickListener {
-            navController.popBackStack()
+        binding.toolbarLayout.btnSettings.setOnClickListener {
+            //todo implement settings section
         }
-
-        binding.btnAgreementNext.setOnClickListener {
-            val isFirstConsentChecked = binding.swtFirsConsent.isChecked
-            val isSecondConsentChecked = binding.swtSecondConsent.isChecked
-
-            if(isFirstConsentChecked && isSecondConsentChecked) {
-                navController.navigate(R.id.action_FtuAgreementFragment_to_FtuWalletName)
-            } else {
-                //todo custom toast to say you have to agree
-            }
-        }
-
     }
 }

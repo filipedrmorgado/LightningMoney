@@ -34,6 +34,16 @@
         android:name="com.filipedrmorgado.lightningmoney.ui.ftu.FtuCreateWalletFragment"
         android:label="@string/ftu_wallet_name"
         tools:layout="@layout/ftu_create_wallet_fragment">
+        <action
+            android:id="@+id/action_FtuWalletName_to_HomeScreen"
+            app:destination="@id/HomeScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeScreen"
+        android:name="com.filipedrmorgado.lightningmoney.ui.homescreen.HomeScreenFragment"
+        android:label="Home Screen"
+        tools:layout="@layout/home_screen_fragment">
     </fragment>
 
 </navigation>

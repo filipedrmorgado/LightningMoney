@@ -1,15 +1,22 @@
 package com.filipedrmorgado.lightningmoney.ui.ftu
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.FtuCreateWalletFragmentBinding
 import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
+import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.WalletCreationState
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
@@ -36,6 +43,41 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
         // Initializing the NavController
         navController = Navigation.findNavController(requireActivity(), R.id.fcv_main)
         setupObservers()
+        setupCollectors()
+    }
+
+    private fun setupCollectors() {
+        lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                ftuViewModel.walletCreationState.collect { state ->
+                    Log.d("FtuCreateWalletFragment","setupCollectors.: state=$state")
+                    handleWalletCreationState(state)
+                }
+            }
+        }
+    }
+
+    private fun handleWalletCreationState(state: WalletCreationState) {
+        when(state) {
+            WalletCreationState.NotStarted -> {
+                // Do nothing
+            }
+            WalletCreationState.Loading -> {
+                //todo add a loading indicator to the user
+            }
+            WalletCreationState.Error -> {
+                //todo create a custom toast for every toast in the project
+                Toast.makeText(
+                    requireContext(),
+                    "An error occurred trying to create the wallet. Try again.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            WalletCreationState.Success -> {
+                navController.popBackStack(R.id.FtuScreenFragment, false)
+                navController.navigate(R.id.HomeScreen)
+            }
+        }
     }
 
     private fun setupObservers() {
