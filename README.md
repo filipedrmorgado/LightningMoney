@@ -13,8 +13,7 @@ They also provide a [demo](https://legend.lnbits.com/) in which you can use to c
 
 # Disclaimer: 
 
-`Please take into consideration that I cannot guarantee the security of the funds. Even though you can create a wallet and trade actual bitcoin, due to LNBits API being in specially made for demonstrations 
-as this wallet app also is for demonstration.` 
+`Please take into consideration that the security of the funds cannot be guaranteed. Even though you can create a wallet and trade actual bitcoin, due to LNBits API main objective being LN demonstrations, this wallet intent is also to demonstrante LN capabilities in real world scenarios.` 
 
 # Design
 
