@@ -54,12 +54,15 @@ dependencies {
 
     // Retrofit, GSON, HTTP Requests, API response and more
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     // API Response.body json to map
     implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
+    implementation("com.squareup.moshi:moshi-adapters:1.12.0")
+    kaptTest("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
-    kaptTest("com.square.moshi:moshi-kotlin-codegen:1.13.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
     // Test
     testImplementation("junit:junit:4.13.2")

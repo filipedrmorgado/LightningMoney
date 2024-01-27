@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.filipedrmorgado.lightningmoney.R
 import com.filipedrmorgado.lightningmoney.databinding.HomeScreenFragmentBinding
-import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
+import com.filipedrmorgado.lightningmoney.ui.homescreen.viewmodel.HomeScreenViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
@@ -21,7 +21,7 @@ class HomeScreenFragment : Fragment(), KoinComponent {
     private lateinit var binding: HomeScreenFragmentBinding
     private lateinit var navController: NavController
     //todo change to HomeScreenViewModel
-    private val ftuViewModel: FtuViewModel by viewModel()
+    private val homeScreenViewModel: HomeScreenViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,

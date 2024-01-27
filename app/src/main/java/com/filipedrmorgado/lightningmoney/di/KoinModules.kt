@@ -1,6 +1,7 @@
 package com.filipedrmorgado.lightningmoney.di
 
 import com.filipedrmorgado.lightningmoney.ui.ftu.viewmodel.FtuViewModel
+import com.filipedrmorgado.lightningmoney.ui.homescreen.viewmodel.HomeScreenViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -10,5 +11,8 @@ val viewModelsModule = module {
         FtuViewModel(
             createWalletUseCase = get(named("createWalletUseCase"))
         )
+    }
+    viewModel {
+        HomeScreenViewModel()
     }
 }

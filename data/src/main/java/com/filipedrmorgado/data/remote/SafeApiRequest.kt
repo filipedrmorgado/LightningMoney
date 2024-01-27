@@ -1,5 +1,6 @@
 package com.filipedrmorgado.data.remote
 
+import android.util.Log
 import com.filipedrmorgado.data.utils.ApiException
 import org.json.JSONException
 import org.json.JSONObject
@@ -27,6 +28,7 @@ abstract class SafeApiRequest {
         } else {
             val error = response.errorBody()?.string()
             val message = buildErrorMessage(response.code(), error)
+            Log.d("SafeApiRequest","apiRequest.: message=$message, error=$error")
             throw ApiException(message)
         }
     }

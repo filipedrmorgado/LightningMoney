@@ -53,6 +53,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_wallet"
         android:importantForAccessibility="no" />
 
+    <!--todo too add the disclaimer regarding funds-->
+
     <!-- Text on the left -->
     <TextView
         android:id="@+id/tv_firstConsent"

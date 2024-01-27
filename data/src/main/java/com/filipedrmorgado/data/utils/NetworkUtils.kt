@@ -13,7 +13,7 @@ const val lightning_base_url = "https://legend.lnbits.com/"
 
 // Account creation requires 2 API requests: account creation and then wallet creation.
 const val url_create_account = "api/v1/account"
-const val url_create_wallet = "/api/v1/wallet"
+const val url_create_wallet = "api/v1/wallet"
 
 //const val url_create_wallet = "usermanager/api/v1/users"
 const val url_wallet_balance = "api/v1/wallet"
