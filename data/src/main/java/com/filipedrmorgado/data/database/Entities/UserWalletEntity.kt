@@ -22,7 +22,6 @@ data class UserWalletEntity(
     val walletId: String,
     val adminKey: String,
     val invoiceKey: String,
-    val walletID: String?,
     val walletName: String?,
     val user: String?,
     val currency: String?,

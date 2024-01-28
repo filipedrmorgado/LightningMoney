@@ -17,7 +17,6 @@ fun UserWalletEntity.mapFromEntity(): UserWallet {
         walletId = this.walletId,
         adminKey = this.adminKey,
         invoiceKey = this.invoiceKey,
-        walletID = this.walletID,
         walletName = this.walletName,
         user = this.user,
         currency = this.currency,
@@ -39,7 +38,6 @@ fun UserWallet.mapToEntity(): UserWalletEntity {
         walletId = this.walletId,
         adminKey = this.adminKey,
         invoiceKey = this.invoiceKey,
-        walletID = this.walletID,
         walletName = this.walletName,
         user = this.user,
         currency = this.currency,
@@ -49,3 +47,4 @@ fun UserWallet.mapToEntity(): UserWalletEntity {
         updatedAt = this.updatedAt
     )
 }
+
