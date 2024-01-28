@@ -16,7 +16,15 @@ fun UserWalletEntity.mapFromEntity(): UserWallet {
     return UserWallet(
         walletId = this.walletId,
         adminKey = this.adminKey,
-        invoiceKey = this.invoiceKey
+        invoiceKey = this.invoiceKey,
+        walletID = this.walletID,
+        walletName = this.walletName,
+        user = this.user,
+        currency = this.currency,
+        balanceMsat = this.balanceMsat,
+        deleted = this.deleted,
+        createdAt = this.createdAt,
+        updatedAt = this.updatedAt
     )
 }
 
@@ -30,6 +38,14 @@ fun UserWallet.mapToEntity(): UserWalletEntity {
         id = 1, // We will always have only 1 wallet.
         walletId = this.walletId,
         adminKey = this.adminKey,
-        invoiceKey = this.invoiceKey
+        invoiceKey = this.invoiceKey,
+        walletID = this.walletID,
+        walletName = this.walletName,
+        user = this.user,
+        currency = this.currency,
+        balanceMsat = this.balanceMsat,
+        deleted = this.deleted,
+        createdAt = this.createdAt,
+        updatedAt = this.updatedAt
     )
 }

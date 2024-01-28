@@ -13,5 +13,13 @@ package com.filipedrmorgado.domain.model
 data class UserWallet(
     val walletId: String,
     val adminKey: String,
-    val invoiceKey: String
+    val invoiceKey: String,
+    val walletID: String?,
+    val walletName: String?,
+    val user: String?,
+    val currency: String?,
+    val balanceMsat: Long?,
+    val deleted: Boolean?,
+    val createdAt: Long?,
+    val updatedAt: Long?
 )
