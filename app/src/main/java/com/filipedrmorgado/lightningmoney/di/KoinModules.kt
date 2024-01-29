@@ -15,7 +15,7 @@ val viewModelsModule = module {
     }
     viewModel {
         HomeScreenViewModel(
-            cacheAdminKeyUseCase = get(named("cacheAdminKeyUseCase"))
+            cacheUserDataUseCase = get(named("cacheUserDataUseCase"))
         )
     }
 }

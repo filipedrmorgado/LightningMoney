@@ -8,7 +8,6 @@ import com.filipedrmorgado.data.mapper.mapToEntity
 import com.filipedrmorgado.data.remote.SafeApiRequest
 import com.filipedrmorgado.domain.model.UserWallet
 import com.filipedrmorgado.domain.repository.UserWalletDataRepository
-import com.filipedrmorgado.domain.utils.EMPTY_STRING
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -22,22 +21,17 @@ class UserWalletDataRepositoryImpl(
 ) : UserWalletDataRepository, SafeApiRequest() {
 
     // Cached adminKey to be able to interact with lightningAPI, avoiding constant DB accesses
-    private var adminKey: String = EMPTY_STRING
+    private var userWalletData: UserWallet? = null
 
-    override suspend fun setAdminKey(createdAdminKey: String) = withContext(defaultDispatcher) {
-        Log.d("UserWalletDataRepositoryImpl","Cached admin key.")
-        adminKey = createdAdminKey
-    }
-
-    override suspend fun cacheAdminKey() = withContext(defaultDispatcher) {
+    override suspend fun cacheUserWalletData() = withContext(defaultDispatcher) {
         // In case we just created the wallet, the value shall be already set
-        if(adminKey != EMPTY_STRING) return@withContext
+        if(userWalletData != null) return@withContext
         val storedUserData = getUserWallet()
-        Log.d("UserWalletDataRepositoryImpl","Cached admin key.")
-        adminKey = storedUserData?.adminKey ?: EMPTY_STRING
+        Log.d("UserWalletDataRepositoryImpl","Cached user wallet data.")
+        userWalletData = storedUserData
     }
 
-    override suspend fun getAdminKey() = adminKey
+    override suspend fun getAdminKey() = userWalletData?.adminKey
 
     /**
      * Retrieve the user wallet information.
@@ -57,6 +51,7 @@ class UserWalletDataRepositoryImpl(
      */
     override suspend fun insertUserWallet(userWallet: UserWallet) = withContext(defaultDispatcher) {
         userWalletDao.insertUserWallet(userWallet.mapToEntity())
+        userWalletData = userWallet
     }
 
     /**

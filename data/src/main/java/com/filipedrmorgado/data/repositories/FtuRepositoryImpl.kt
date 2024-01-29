@@ -45,10 +45,8 @@ class FtuRepositoryImpl(
                     apiKey = userWalletData.adminKey,
                     createJsonRequestBody("name" to walletName))
             }
-            // Store the data in DB.
+            // Store the data in DB and caches it.
             userWalletDataRepository.insertUserWallet(userWalletData)
-            // Sets admin key to be cached
-            userWalletDataRepository.setAdminKey(userWalletData.adminKey)
             Success(walletCreationResponse)
         } catch(apiException: ApiException) {
             Log.e("FtuRepositoryImpl","createUserWallet.: Error creating wallet.")

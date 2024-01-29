@@ -5,11 +5,9 @@ import com.filipedrmorgado.domain.model.UserWallet
 interface UserWalletDataRepository {
 
 
-    suspend fun setAdminKey(createdAdminKey: String)
+    suspend fun cacheUserWalletData()
 
-    suspend fun cacheAdminKey()
-
-    suspend fun getAdminKey(): String
+    suspend fun getAdminKey(): String?
 
     /**
      * Retrieve the user wallet information.
