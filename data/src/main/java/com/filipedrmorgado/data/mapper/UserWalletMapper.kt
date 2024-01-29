@@ -1,6 +1,7 @@
 package com.filipedrmorgado.data.mapper
 
-import com.filipedrmorgado.data.database.Entities.UserWalletEntity
+import com.filipedrmorgado.data.database.entities.UserWalletEntity
+import com.filipedrmorgado.data.remote.response.AccountCreation
 import com.filipedrmorgado.domain.model.UserWallet
 
 /**
@@ -48,3 +49,16 @@ fun UserWallet.mapToEntity(): UserWalletEntity {
     )
 }
 
+
+fun AccountCreation.mapToUserWallet() = UserWallet(
+    walletId = this.walletID,
+    adminKey = this.adminKey,
+    invoiceKey = this.invoiceKey,
+    walletName = this.walletName,
+    user = this.user,
+    currency = this.currency,
+    balanceMsat = this.balanceMsat,
+    deleted = this.deleted,
+    createdAt = this.createdAt,
+    updatedAt = this.updatedAt
+)

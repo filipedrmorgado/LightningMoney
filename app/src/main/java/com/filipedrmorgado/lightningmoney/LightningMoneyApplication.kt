@@ -1,7 +1,6 @@
 package com.filipedrmorgado.lightningmoney
 
 import android.app.Application
-import android.util.Log
 import com.filipedrmorgado.data.di.networkingModule
 import com.filipedrmorgado.data.di.repositoriesModule
 import com.filipedrmorgado.di.di.databaseModule
@@ -16,7 +15,6 @@ class LightningMoneyApplication: Application() {
 
         startKoin {
             androidContext(this@LightningMoneyApplication)
-            Log.d("Koin", "ZZZZ LightningMoneyApplication")
             modules(
                 listOf(
                     databaseModule,

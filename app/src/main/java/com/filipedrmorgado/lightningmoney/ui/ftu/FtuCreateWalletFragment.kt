@@ -91,7 +91,8 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
         }
 
         binding.btnCreateWallet.setOnClickListener {
-            ftuViewModel.createWallet(binding.tvNameWallet.text.toString())
+            //todo disable button when the length of the name is 0
+            ftuViewModel.createWallet(binding.etInputField.text.toString())
         }
     }
 }

@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.filipedrmorgado.data.database.Entities.UserWalletEntity
+import com.filipedrmorgado.data.database.entities.UserWalletEntity
 
 @Dao
 interface UserWalletDao {

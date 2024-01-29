@@ -1,4 +1,4 @@
-package com.filipedrmorgado.data.database.Entities
+package com.filipedrmorgado.data.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -22,11 +22,11 @@ data class UserWalletEntity(
     val walletId: String,
     val adminKey: String,
     val invoiceKey: String,
-    val walletName: String?,
-    val user: String?,
+    val walletName: String,
+    val user: String,
     val currency: String?,
-    val balanceMsat: Long?,
-    val deleted: Boolean?,
-    val createdAt: Long?,
-    val updatedAt: Long?
+    val balanceMsat: Long,
+    val deleted: Boolean,
+    val createdAt: Long,
+    val updatedAt: Long
 )

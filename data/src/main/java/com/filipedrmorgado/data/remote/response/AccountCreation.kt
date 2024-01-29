@@ -4,23 +4,23 @@ import com.squareup.moshi.Json
 
 data class AccountCreation(
     @Json(name = "id")
-    val walletID: String?,
+    val walletID: String,
     @Json(name = "name")
-    val walletName: String?,
+    val walletName: String,
     @Json(name = "user")
-    val user: String?,
+    val user: String,
     @Json(name = "adminkey")
-    val adminKey: String?,
+    val adminKey: String,
     @Json(name = "inkey")
-    val invoiceKey: String?,
+    val invoiceKey: String,
     @Json(name = "currency")
     val currency: String?,
     @Json(name = "balance_msat")
-    val balanceMsat: Long?,
+    val balanceMsat: Long,
     @Json(name = "deleted")
-    val deleted: Boolean?,
+    val deleted: Boolean,
     @Json(name = "created_at")
-    val createdAt: Long?,
+    val createdAt: Long,
     @Json(name = "updated_at")
-    val updatedAt: Long?
+    val updatedAt: Long
 )

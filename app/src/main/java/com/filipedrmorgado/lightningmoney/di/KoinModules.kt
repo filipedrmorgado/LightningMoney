@@ -9,10 +9,13 @@ import org.koin.dsl.module
 val viewModelsModule = module {
     viewModel {
         FtuViewModel(
-            createWalletUseCase = get(named("createWalletUseCase"))
+            createWalletUseCase = get(named("createWalletUseCase")),
+            hasWalletBeenCreatedUseCase = get(named("hasWalletBeenCreatedUseCase"))
         )
     }
     viewModel {
-        HomeScreenViewModel()
+        HomeScreenViewModel(
+            cacheAdminKeyUseCase = get(named("cacheAdminKeyUseCase"))
+        )
     }
 }

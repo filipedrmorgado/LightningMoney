@@ -1,13 +1,14 @@
 package com.filipedrmorgado.data.repositories
 
 import android.util.Log
-import com.filipedrmorgado.data.database.Entities.UserWalletEntity
+import com.filipedrmorgado.data.database.entities.UserWalletEntity
 import com.filipedrmorgado.data.database.dao.UserWalletDao
 import com.filipedrmorgado.data.mapper.mapFromEntity
 import com.filipedrmorgado.data.mapper.mapToEntity
 import com.filipedrmorgado.data.remote.SafeApiRequest
 import com.filipedrmorgado.domain.model.UserWallet
 import com.filipedrmorgado.domain.repository.UserWalletDataRepository
+import com.filipedrmorgado.domain.utils.EMPTY_STRING
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -20,9 +21,23 @@ class UserWalletDataRepositoryImpl(
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : UserWalletDataRepository, SafeApiRequest() {
 
-    init {
-        //todo obtain key to sign requests to API, or, find a way to do it any other way.
+    // Cached adminKey to be able to interact with lightningAPI, avoiding constant DB accesses
+    private var adminKey: String = EMPTY_STRING
+
+    override suspend fun setAdminKey(createdAdminKey: String) = withContext(defaultDispatcher) {
+        Log.d("UserWalletDataRepositoryImpl","Cached admin key.")
+        adminKey = createdAdminKey
     }
+
+    override suspend fun cacheAdminKey() = withContext(defaultDispatcher) {
+        // In case we just created the wallet, the value shall be already set
+        if(adminKey != EMPTY_STRING) return@withContext
+        val storedUserData = getUserWallet()
+        Log.d("UserWalletDataRepositoryImpl","Cached admin key.")
+        adminKey = storedUserData?.adminKey ?: EMPTY_STRING
+    }
+
+    override suspend fun getAdminKey() = adminKey
 
     /**
      * Retrieve the user wallet information.
