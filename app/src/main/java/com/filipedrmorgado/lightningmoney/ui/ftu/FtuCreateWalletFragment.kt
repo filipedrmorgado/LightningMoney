@@ -97,8 +97,16 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
         }
 
         binding.btnCreateWallet.setOnClickListener {
-            //todo disable button when the length of the name is 0
-            ftuViewModel.createWallet(binding.etInputField.text.toString())
+            //Display when the length of the name is 0
+            if(binding.etInputField.text?.isEmpty() == true) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please make sure you insert your wallet name.",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                ftuViewModel.createWallet(binding.etInputField.text.toString())
+            }
         }
 
         binding.etInputField.setOnFocusChangeListener { _, hasFocus ->
