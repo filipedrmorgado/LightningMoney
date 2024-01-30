@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/btn_medium_padding"
             android:background="@drawable/btn_background_stroke_bg_purple"
-            android:hint="@string/tv_wallet_name_hint"
+            android:fontFamily="@font/inter_regular"
             android:maxLength="10"/>
 
     </com.google.android.material.textfield.TextInputLayout>

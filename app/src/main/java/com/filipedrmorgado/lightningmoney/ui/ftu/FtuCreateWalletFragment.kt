@@ -20,6 +20,7 @@ import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
+
 /**
  * This fragment will deal with First Time Use of the application by the user.
  */
@@ -44,6 +45,11 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
         navController = Navigation.findNavController(requireActivity(), R.id.fcv_main)
         setupObservers()
         setupCollectors()
+        setupUi()
+    }
+
+    private fun setupUi() {
+        binding.etInputField.setHint(R.string.tv_wallet_name_hint)
     }
 
     private fun setupCollectors() {
@@ -94,5 +100,14 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
             //todo disable button when the length of the name is 0
             ftuViewModel.createWallet(binding.etInputField.text.toString())
         }
+
+        binding.etInputField.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus || binding.etInputField.text?.isNotEmpty() == true) {
+                binding.etInputField.hint = ""
+            } else {
+                binding.etInputField.setHint(R.string.tv_wallet_name_hint)
+            }
+        }
+
     }
 }
