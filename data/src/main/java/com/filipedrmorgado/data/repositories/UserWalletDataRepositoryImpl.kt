@@ -1,8 +1,8 @@
 package com.filipedrmorgado.data.repositories
 
 import android.util.Log
-import com.filipedrmorgado.data.database.entities.UserWalletEntity
 import com.filipedrmorgado.data.database.dao.UserWalletDao
+import com.filipedrmorgado.data.database.entities.UserWalletEntity
 import com.filipedrmorgado.data.mapper.mapFromEntity
 import com.filipedrmorgado.data.mapper.mapToEntity
 import com.filipedrmorgado.data.remote.SafeApiRequest
@@ -20,15 +20,16 @@ class UserWalletDataRepositoryImpl(
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : UserWalletDataRepository, SafeApiRequest() {
 
-    // Cached adminKey to be able to interact with lightningAPI, avoiding constant DB accesses
+    // Stored user wallet data up to date
     private var userWalletData: UserWallet? = null
 
     override suspend fun cacheUserWalletData() = withContext(defaultDispatcher) {
-        // In case we just created the wallet, the value shall be already set
-        if(userWalletData != null) return@withContext
         val storedUserData = getUserWallet()
         Log.d("UserWalletDataRepositoryImpl","Cached user wallet data.")
-        userWalletData = storedUserData
+        if (storedUserData != null) {
+            userWalletData = storedUserData
+        }
+        userWalletData
     }
 
     override suspend fun getAdminKey() = userWalletData?.adminKey

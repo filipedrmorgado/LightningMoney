@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -61,6 +62,11 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
                 navController.navigate(R.id.action_FtuAgreementFragment_to_FtuWalletName)
             } else {
                 //todo custom toast to say you have to agree
+                Toast.makeText(
+                    requireContext(),
+                    "You have to agree all the conditions to continue.",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 

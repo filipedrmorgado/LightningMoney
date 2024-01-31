@@ -32,7 +32,6 @@ interface LightningAPI {
     @Headers(http_lightning_content_type)
     @POST(url_create_wallet)
     suspend fun createWallet(
-        //todo finish logic for create wallet api req
         @Header("X-Api-Key") apiKey: String,
         @Body params: RequestBody
     ) : Response<WalletCreation>
@@ -40,7 +39,6 @@ interface LightningAPI {
     @Headers(http_lightning_content_type)
     @POST(url_create_account)
     suspend fun createAccount(
-        //todo finish logic for create wallet api req
         @Body params: RequestBody
     ) : Response<AccountCreation>
 

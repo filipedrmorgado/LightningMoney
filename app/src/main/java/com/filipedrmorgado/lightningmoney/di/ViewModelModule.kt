@@ -15,7 +15,7 @@ val viewModelsModule = module {
     }
     viewModel {
         HomeScreenViewModel(
-            cacheUserDataUseCase = get(named("cacheUserDataUseCase"))
+            updateUserDataUseCase = get(named("updateUserDataUseCase"))
         )
     }
 }

@@ -5,7 +5,7 @@ import com.filipedrmorgado.domain.model.UserWallet
 interface UserWalletDataRepository {
 
 
-    suspend fun cacheUserWalletData()
+    suspend fun cacheUserWalletData(): UserWallet?
 
     suspend fun getAdminKey(): String?
 
