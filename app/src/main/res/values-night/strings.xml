@@ -27,4 +27,5 @@
     <string name="default_euro_balance">€ 0</string>
     <string name="default_sats_balance">0 sats</string>
     <string name="wallet_balance_format">%s sats</string>
+    <string name="error_loading_data">Error loading data</string>
 </resources>

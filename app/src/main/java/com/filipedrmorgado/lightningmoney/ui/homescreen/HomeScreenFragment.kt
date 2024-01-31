@@ -73,5 +73,6 @@ class HomeScreenFragment : Fragment(), KoinComponent {
         //todo yet to implement the api to make updated conversions to other FIAT.
         //note to self: keep data of fiat currencies cached if possible, to avoid api requests every update. Unless the request is fast.
         binding.tvWalletSecondaryBalance.text = "€ 0"
+        binding.tvWalletName.text = homeScreenViewModel.userWalletData.value?.walletName ?: R.string.error_loading_data.toString()
     }
 }
