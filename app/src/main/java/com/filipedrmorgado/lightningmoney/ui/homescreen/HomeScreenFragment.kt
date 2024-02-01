@@ -58,6 +58,7 @@ class HomeScreenFragment : Fragment(), KoinComponent {
             //todo implement settings section
         }
 
+        // Whenever there is new user wallet data, home screen data will be updated.
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 homeScreenViewModel.userWalletData.collect {
@@ -67,6 +68,9 @@ class HomeScreenFragment : Fragment(), KoinComponent {
         }
     }
 
+    /**
+     * Updates home screen user wallet data.
+     */
     private fun updateHomeScreenWalletData(userWallet: UserWallet?) {
         val balanceText = getString(R.string.wallet_balance_format, userWallet?.balanceMsat.toString())
         binding.tvWalletBalance.text = balanceText

@@ -63,6 +63,9 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
         }
     }
 
+    /**
+     * Handles states updates related to creation of the wallet.
+     */
     private fun handleWalletCreationState(state: WalletCreationState) {
         when(state) {
             WalletCreationState.NotStarted -> {
@@ -70,6 +73,7 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
             }
             WalletCreationState.Loading -> {
                 //todo add a loading indicator to the user
+
             }
             WalletCreationState.Error -> {
                 //todo create a custom toast for every toast in the project
@@ -96,6 +100,7 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
             navController.popBackStack()
         }
 
+        // Create wallet when clicking the create btn. Display a message when user didn't up any name.
         binding.btnCreateWallet.setOnClickListener {
             //Display when the length of the name is 0
             if(binding.etInputField.text?.isEmpty() == true) {
@@ -109,6 +114,7 @@ class FtuCreateWalletFragment : Fragment(), KoinComponent {
             }
         }
 
+        // Handles text input field hint, to show and hide.
         binding.etInputField.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus || binding.etInputField.text?.isNotEmpty() == true) {
                 binding.etInputField.hint = ""

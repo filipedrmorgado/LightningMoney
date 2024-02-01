@@ -19,9 +19,9 @@ class HomeScreenViewModel(
     val userWalletData = _userWalletData.asStateFlow()
 
     init {
-        //todo set homscreen values, obtained from the wallet.
+        //todo set homescreen values, obtained from the wallet.
         viewModelScope.launch(defaultDispatcher){
-            // Caches the adminKey to be used in lightningAPI requests
+            // Caches the user wallet data
             _userWalletData.value = updateUserDataUseCase()
         }
     }

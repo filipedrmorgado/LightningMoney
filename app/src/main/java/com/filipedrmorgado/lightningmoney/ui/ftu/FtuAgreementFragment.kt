@@ -42,7 +42,7 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
 
 
     /**
-     * Sets behaviour for the back behaviour in toolbar and Next screen logic.
+     * Sets behaviour for the toolbar behaviour in toolbar and next screen logic.
      */
     private fun setupObservers() {
         // Set OnClickListener for the back behaviour
@@ -54,6 +54,7 @@ class FtuAgreementFragment : Fragment(), KoinComponent {
             navController.popBackStack()
         }
 
+        // Advances to next screen when both agreements are checked. Displays message when a check is missing.
         binding.btnAgreementNext.setOnClickListener {
             val isFirstConsentChecked = binding.swtFirsConsent.isChecked
             val isSecondConsentChecked = binding.swtSecondConsent.isChecked

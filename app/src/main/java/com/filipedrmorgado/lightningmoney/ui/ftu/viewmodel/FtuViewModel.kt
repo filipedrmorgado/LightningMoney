@@ -26,8 +26,6 @@ class FtuViewModel(
 
     /**
      * Will do the necessary checks for the wallet name and create it if everything is in accordance.
-     *
-     * @return `true` if created with success, `false` otherwise
      */
     fun createWallet(walletName: String) = viewModelScope.launch(Dispatchers.Main) {
         _walletCreationState.value = WalletCreationState.Loading
@@ -39,6 +37,9 @@ class FtuViewModel(
         }
     }
 
+    /**
+     * @return `true` if created, `false` otherwise
+     */
     suspend fun hasWalletBeenCreated(): Boolean {
         val hasWalletBeenCreatedUseCase = hasWalletBeenCreatedUseCase()
         Log.d("FtuViewModel","createWallet.: hasWalletBeenCreatedUseCase=$hasWalletBeenCreatedUseCase")

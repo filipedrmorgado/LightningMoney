@@ -15,6 +15,7 @@ class LightningMoneyApplication: Application() {
 
         startKoin {
             androidContext(this@LightningMoneyApplication)
+            // Initialization of every module regarding di in KOIN
             modules(
                 listOf(
                     databaseModule,
