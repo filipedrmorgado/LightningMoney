@@ -12,7 +12,6 @@ import retrofit2.Response
  */
 abstract class SafeApiRequest {
 
-
     /**
      * Executes the API request in a safe manner.
      *
@@ -28,7 +27,7 @@ abstract class SafeApiRequest {
         } else {
             val error = response.errorBody()?.string()
             val message = buildErrorMessage(response.code(), error)
-            Log.d("SafeApiRequest","apiRequest.: message=$message, error=$error")
+            Log.d("SafeApiRequest", "apiRequest.: message=$message, error=$error")
             throw ApiException(message)
         }
     }

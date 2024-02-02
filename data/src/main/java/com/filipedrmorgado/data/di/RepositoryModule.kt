@@ -6,9 +6,10 @@ import com.filipedrmorgado.domain.repository.FtuRepository
 import com.filipedrmorgado.domain.repository.UserWalletDataRepository
 import org.koin.dsl.module
 
-
+/**
+ * Koin module for providing repository dependencies.
+ */
 val repositoriesModule = module {
     single<UserWalletDataRepository> { UserWalletDataRepositoryImpl(get()) }
-
-    single<FtuRepository> { FtuRepositoryImpl(get(),get()) }
+    single<FtuRepository> { FtuRepositoryImpl(get(), get()) }
 }

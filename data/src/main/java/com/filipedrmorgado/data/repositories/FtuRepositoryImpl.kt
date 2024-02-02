@@ -17,6 +17,10 @@ import com.filipedrmorgado.domain.utils.Success
 
 /**
  * Repository expected to deal with user wallet data
+ *
+ * @param userWalletDataRepository The repository responsible for managing user wallet data.
+ * @param lightningAPI The Lightning API service for making API requests.
+ * @param defaultDispatcher The coroutine dispatcher to be used for IO operations. Default is [Dispatchers.IO].
  */
 class FtuRepositoryImpl(
     private val userWalletDataRepository: UserWalletDataRepository,
@@ -29,7 +33,7 @@ class FtuRepositoryImpl(
      * - First: create an account
      * - Second: create a wallet in the account just created
      *
-     * @return `Sucess` if created with success, `Error` otherwise
+     * @return [Success] if created with success, [Error] otherwise
      */
     override suspend fun createUserWallet(walletName: String): Result = withContext(defaultDispatcher) {
         try {

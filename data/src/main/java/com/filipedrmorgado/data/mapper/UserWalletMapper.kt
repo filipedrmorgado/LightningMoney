@@ -49,7 +49,11 @@ fun UserWallet.mapToEntity(): UserWalletEntity {
     )
 }
 
-
+/**
+ * Map an [AccountCreation] response to a [UserWallet] domain model.
+ *
+ * @return A [UserWallet] domain model.
+ */
 fun AccountCreation.mapToUserWallet() = UserWallet(
     walletId = this.walletID,
     adminKey = this.adminKey,

@@ -14,6 +14,9 @@ import kotlinx.coroutines.withContext
 
 /**
  * Repository expected to deal with user wallet data
+ *
+ * @param userWalletDao The Room DAO for accessing user wallet data in the local database.
+ * @param defaultDispatcher The coroutine dispatcher to be used for IO operations. Default is [Dispatchers.IO].
  */
 class UserWalletDataRepositoryImpl(
     private val userWalletDao: UserWalletDao,
@@ -23,6 +26,11 @@ class UserWalletDataRepositoryImpl(
     // Stored user wallet data up to date
     private var userWalletData: UserWallet? = null
 
+    /**
+     * Cache user wallet data and return the cached data.
+     *
+     * @return The cached [UserWallet] data.
+     */
     override suspend fun cacheUserWalletData() = withContext(defaultDispatcher) {
         val storedUserData = getUserWallet()
         Log.d("UserWalletDataRepositoryImpl","Cached user wallet data.")
@@ -32,6 +40,11 @@ class UserWalletDataRepositoryImpl(
         userWalletData
     }
 
+    /**
+     * Get the administrative key associated with the user's wallet.
+     *
+     * @return The administrative key.
+     */
     override suspend fun getAdminKey() = userWalletData?.adminKey
 
     /**
