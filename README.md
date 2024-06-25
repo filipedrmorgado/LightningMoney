@@ -113,7 +113,7 @@ In cases where Interactors are not present, the business logic typically resides
 ## License
 
  ```
-   Copyright 2019 David Odari
+   Copyright 2019 Filipe Morgado
    
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
